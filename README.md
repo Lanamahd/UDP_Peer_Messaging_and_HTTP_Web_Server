@@ -56,10 +56,10 @@ python program.py
 # Contact
 For any inquiries, please open an issue on this repository or contact the authors through the course submission portal.
 
-Authors: Jana Sawalmeh, Lana Musaffer, Tariq Al-Atrash
-Course: ENCS3321 – Computer Networks
-Instructor: Dr. Abdalkarim Awad
-Semester: Second Semester 2023–2024
+- Authors: Jana Sawalmeh, Lana Musaffer, Tariq Al-Atrash
+- Course: ENCS3321 – Computer Networks
+- Instructor: Dr. Abdalkarim Awad
+- Semester: Second Semester 2023–2024
 
 
 
