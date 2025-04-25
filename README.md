@@ -37,29 +37,38 @@ Developed as part of the ENCS3321 – Computer Networks course project.
 - Python 3.x installed on your system
 
 ### Clone the Repository
+1. Clone the repository:
+     ```bash
+      git clone https://github.com/Lanamahd/UDP_Peer_Messaging_and_HTTP_Web_Server.git
+      cd UDP_Peer_Messaging_and_HTTP_Web_Server
 
-git clone https://github.com/Lanamahd/UDP_Peer_Messaging_and_HTTP_Web_Server.git
-cd UDP_Peer_Messaging_and_HTTP_Web_Server
+2. Install dependenciess:
+     ```bash
+    pip install -r requirements.txt
 
-# Running the UDP Peer Messaging System
-python udp_peer_chat.py
+## Usage
+### Running the UDP Peer Messaging System
 
-- Enter your name when prompted
+1. Navigate to the UDP messaging directory.
 
-- Start sending and receiving messages with peers on the same network
+2. Execute the script:
+     ```bash  
+    python udp_peer_chat.py
 
-# Running the HTTP Web Server
-python program.py
+3. Follow the instructions on-screen to connect and start messaging.   
 
-- Open a browser and go to http://localhost:6060 to view the hosted content
 
-# Contact
-For any inquiries, please open an issue on this repository or contact the authors through the course submission portal.
+### Running the HTTP Web Server
 
-- Authors: Jana Sawalmeh, Lana Musaffer, Tariq Al-Atrash
-- Course: ENCS3321 – Computer Networks
-- Instructor: Dr. Abdalkarim Awad
-- Semester: Second Semester 2023–2024
+1. Navigate to the HTTP server directory.
+2. Start the server:
+     ```bash
+     python program.py
+
+3. Open your browser and navigate to http://localhost:PORT to view the hosted content.
+
+
+
 
 
 
