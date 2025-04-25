@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>myform</title>
+    <style>
+        body {
+            background-color: #641616; /* Background color for the entire page */
+            font-family:"Droid Arabic Naskh", Arial, sans-serif; /* Change font family */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            display: flex; /* Use flexbox for layout */
+            height: 100vh; /* Set full height */
+        }
+        
+        .right-half {
+            flex: 1; /* Take up half of the space */
+            background-image: url('palestine.jpg'); /* Set background image for the left half */
+            background-size: cover; /* Cover the entire element with the background image */
+            background-position: center; /* Center the background image */
+            padding: 150px; /* Add padding to create space between the content and the border */
+            background-color: rgba(78, 21, 21, 0.5); /* Background color for the padding */
+            position: relative; /* Position relative for absolute positioning */
+            border: 20px solid rgb(58, 10, 10); /* Add border around the background image */
+        }
+
+        .left-half {
+            flex: 1; /* Take up half of the space */
+            background-color: #C7B7A3; /* Set background color for the right half */
+            padding: 50px; /* Add padding for content */
+        }
+
+        .center-text {
+            text-align: center; /* Center align the text */
+            position: absolute; /* Position absolute for positioning */
+            top: 50%; /* Align to the middle vertically */
+            left: 50%; /* Align to the middle horizontally */
+            transform: translate(-50%, -50%); /* Center the element */
+            font-size: 12px; /* Adjust font size of h1 */
+        }
+
+        /* Button styles */
+        .button {
+            background-color: #12372A; 
+            border: none;
+            color: #ADBC9F;
+            font-family: Arial, Helvetica;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px; /* Adjust margin-top */
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .button:hover {
+            background-color: #2C7865;
+            text-decoration: underline;
+        }
+
+        /* Style the form */
+        .image-form {
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        /* Style the input box */
+        .image-input {
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        /* Style the submit button */
+        .submit-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #2C7865;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .submit-btn:hover {
+            background-color: #328873;
+            text-decoration: underline;
+        }
+
+        /* Style the image display */
+        .image-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h2 {
+            color: #411313; /* Set text color */
+            font-size: 24px; /* Set font size */
+            margin-bottom: 20px; /* Add bottom margin */
+        }
+    </style>
+</head>
+<body>
+
+    
+<div class="left-half">
+
+<!-- Form to input image name -->
+<div class="image-form">
+    <form id="imageForm">
+        <h2>Search for an Image</h2>
+        <input type="text" id="imageName" class="image-input" placeholder="Enter image name">
+        <button type="submit" class="submit-btn">GET IMAGE</button>
+    </form>
+</div>
+
+<!-- Container to display the image -->
+<div class="image-container" id="imageContainer"></div>
+
+<script>
+    // Function to display the image
+    function showImage(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get the input value
+        var imageName = document.getElementById('imageName').value.trim();
+
+        // Check if input is not empty
+        if (imageName !== '') {
+            // Create image element
+            var image = document.createElement('img');
+            // Set image source to input value with folder name prepended
+            image.src = 'images/' + imageName; 
+
+            // Clear previous image (if any) and append new image
+            var imageContainer = document.getElementById('imageContainer');
+            imageContainer.innerHTML = '';
+            imageContainer.appendChild(image);
+        } else {
+            // If input is empty, display an alert
+            alert('Please enter a valid image name.');
+        }
+    }
+
+    // Attach event listener to form submission
+    document.getElementById('imageForm').addEventListener('submit', showImage);
+</script>
+
+</div>
+
+<div class="right-half">
+    <div class="center-text">
+        <h1>FROM THE RIVER TO THE SEA</h1>
+        <h1>PALESTINE WILL BE FREE</h1>
+        <button class="button" onclick="window.location.href='main_en.html'">Go Back To Our Main Page</button>
+    </div>
+</div>
+
+</body>
+</html>
