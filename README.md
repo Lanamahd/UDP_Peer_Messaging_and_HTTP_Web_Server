@@ -53,9 +53,6 @@ python program.py
 
 - Open a browser and go to http://localhost:6060 to view the hosted content
 
-# Project Structure
-
-
 # Contact
 For any inquiries, please open an issue on this repository or contact the authors through the course submission portal.
 
